@@ -1,0 +1,12 @@
+<web-app>
+	<servlet>
+		<servlet-name>Practice</servlet-name>
+		<servlet-class>com.example.web.ClickMe</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Practice</servlet-name>
+		<url-pattern>/clickMe</url-pattern>
+	</servlet-mapping>
+</web-ap>
+

@@ -1,0 +1,11 @@
+<web-app>
+	<servlet>
+		<servlet-name>Ch4 Name</servlet-name>
+		<servlet-class>com.example.web.Ch4Name</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Ch4 Name</servlet-name>
+		<url-pattern>/name</url-pattern>
+	</servlet-mapping>
+</web-app>
