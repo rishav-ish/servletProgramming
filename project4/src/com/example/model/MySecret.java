@@ -5,9 +5,9 @@ public class MySecret {
 		name = name.toUpperCase();
 		
 		if(name.equals("ISHITA"))
-			return "Yes, you are my love";
+			return "Hello, Ishita ... the most beautiful girl in this world.";
 		else
-			return "No, you are nothing like love to me.";
+			return "Hello, " + name;
 		
 	}
 }

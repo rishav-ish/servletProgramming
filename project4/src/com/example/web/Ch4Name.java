@@ -13,9 +13,36 @@ public class Ch4Name extends HttpServlet{
 		     PrintWriter out = response.getWriter();
 
 		     String c = request.getParameter("name");
+			 
+			 String user = request.getHeader("User-Agent");
+			 String host = request.getHeader("Host");
+			 String language = request.getHeader("Accept-Language");
+			 String accept = request.getHeader("Accept");
+			 String encoding = request.getHeader("Accept-Encoding");
+			 String charset = request.getHeader("Accept-Charset");
+			 String alive = request.getHeader("Keep-Alive");
 
 		     MySecret ms = new MySecret();
 			 
 			 out.println(ms.amIYourLove(c));
+			 
+			 // String secret = ms.amIYourLove(c);
+			 
+			 // request.setAttribute("styles",secret);
+			 
+			 // RequestDispatcher view = request.getRequestDispatcher("secret.jsp");
+			 
+			 // view.forward(request,response);
+			 
+			 out.println("<br><br>some Information about your header packet ...<br>");
+			 
+			 out.println("<br>UserAgent : " + user);
+			 out.println("<br>Host : " + host);
+			 out.println("<br>Accept-Language : " + language);
+			 out.println("<br>Accept : " + accept);
+			 out.println("<br>Accept-Encoding : " + encoding);
+			 out.println("<br>Accept-Charset : " + charset);
+			 out.println("<br>Keep-Alive : " + alive);
+			 
 	}
 }

@@ -9,11 +9,11 @@ import java.util.*;
 public class BeerSelect extends HttpServlet{
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 			
-		     response.setContentType("text/html");
+		     // response.setContentType("text/html");
 
-		     PrintWriter out = response.getWriter();
+		     // PrintWriter out = response.getWriter();
 
-		     out.println("Beer Selection Advice <br>");
+		     // out.println("Beer Selection Advice <br>");
 
 		     String c = request.getParameter("color");
 
@@ -23,11 +23,16 @@ public class BeerSelect extends HttpServlet{
 			 
 			 List result = be.getBrands(c);
 			 
-			 Iterator it = result.iterator();
+			 // Iterator it = result.iterator();
 			 
-			 while(it.hasNext()){
-				 out.println("<br>try : " + it.next());
-			 }
+			 // while(it.hasNext()){
+				 // out.println("<br>try : " + it.next());
+			  // } 
 			 
+			 request.setAttribute("styles",result);
+			 
+			 RequestDispatcher view = request.getRequestDispatcher("result.jsp");
+			 
+			 view.forward(request,response);
 	}
 }
