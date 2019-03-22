@@ -44,5 +44,18 @@ public class Ch4Name extends HttpServlet{
 			 out.println("<br>Accept-Charset : " + charset);
 			 out.println("<br>Keep-Alive : " + alive);
 			 
+			 
+			 //adding some inforamtion about port...
+			 
+			 int remotePort = request.getRemotePort();
+			 int serverPort = request.getServerPort();
+			 int localPort = request.getLocalPort();
+			 
+			 
+			 out.println("<br><br>Some inforamtion about ports....<br>");
+			 out.println("<br>Remote Port : " + remotePort);
+			 out.println("<br>Server Port : " + serverPort);
+			 out.println("<br>Local Port : " + localPort);
+			 
 	}
 }
