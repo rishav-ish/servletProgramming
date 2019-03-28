@@ -1,0 +1,17 @@
+<web-app>
+	<servlet>
+		<servlet-name>EmailTest</servlet-name>
+		<servlet-class>com.example.web.Email</servlet-class>
+
+		<init-param>
+			<param-name>adminEmail</param-name>
+			<param-value>rishavkumar446@gmail.com</param-value>
+		</init-param>
+
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EmailTest</servlet-name>
+		<url-pattern>/email.do</url-pattern>
+	</servlet-mapping>
+</web-app>

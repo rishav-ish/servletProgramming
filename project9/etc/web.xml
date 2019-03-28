@@ -1,0 +1,16 @@
+<web-app>
+	<servlet>
+		<servlet-name>context Example</servlet-name>
+		<servlet-class>com.example.web.ContextParamExample</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>context Example</servlet-name>
+		<url-pattern>/context</url-pattern>
+	</servlet-mapping>
+
+	<context-param>
+		<param-name>email</param-name>
+		<param-value>rishavkumar446@gmail.com</param-value>
+	</context-param>
+</web-app>
